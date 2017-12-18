@@ -157,5 +157,9 @@ int main() {
 	const char *utf8data = "\xE2\x88\x83y \xE2\x88\x80x \xC2\xAC(x \xE2\x89\xBA y)";
 	const char *color = "green";
 	LOG_INFO("color=s data=s long=s hello", color, utf8data, longstr);
+	
+	char empty[3];
+	memset(empty, '\0', 3);
+	LOG_INFO("foo=*s hello", 3, empty);
 	return 0;
 }
